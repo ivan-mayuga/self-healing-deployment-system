@@ -1,0 +1,6 @@
+{
+    "timestamp": "2026-06-08T11:28:58.467418",
+    "service": "myapp",
+    "failure_reason": "healthcheck failed",
+    "action": "rollback initiated"
+}
