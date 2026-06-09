@@ -1,13 +1,3 @@
-
-lines completely.
-
----
-
-# Correct deploy.yml
-
-Copy this exactly:
-
-```yaml
 name: Self-Healing Deployment CI
 
 on:
