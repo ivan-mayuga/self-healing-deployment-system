@@ -27,6 +27,9 @@ while True:
         print("Service healthy")
         log_event("HEALTHY")
 
+        if service_was_down:
+            notify("✅ Service recovered successfully after restart.")
+
         service_was_down = False
 
     except Exception as e:
@@ -35,7 +38,10 @@ while True:
 
             print("Service unhealthy")
 
-            notify(f"Service failure detected: {e}")
+            notify(
+                f"🚨 Health check failed. Service is unhealthy.\n"
+                f"Reason: {e}"
+            )
 
             log_event("UNHEALTHY")
 
@@ -46,6 +52,10 @@ while True:
                     str(e)
                 ]
             )
+
+            notify("📄 Incident report generated.")
+
+            notify("🔄 Container restart initiated.")
 
             subprocess.run(
                 [
