@@ -2,70 +2,92 @@
 
 ## Overview
 
-A DevOps-focused project that automatically deploys, monitors, detects failures, generates incident reports, and performs self-healing actions through automated container restarts and rollback mechanisms.
+A production-inspired DevOps project that demonstrates automated software delivery, containerization, infrastructure automation, monitoring, alerting, and Kubernetes-based self-healing deployments.
+
+The project showcases a complete DevOps workflow from code commit to deployment, including automated testing, Docker image publishing, Infrastructure as Code (Terraform), Kubernetes orchestration, rolling updates, rollback capabilities, and Discord-based incident notifications.
 
 ## Features
 
-- Automated deployment using Bash
-- Dockerized Flask application
-- Health check automation
-- Deployment history tracking
-- Incident report generation
-- Automatic rollback
-- Continuous monitoring
-- Self-healing container restart
-- Alert notifications
-- Monitoring logs
+### Application & Containerization
+
+* Dockerized Flask application
+* Multi-environment deployment support
+* Container lifecycle management
+
+### CI/CD Automation
+
+* GitHub Actions pipeline
+* Automated test execution with Pytest
+* Automated Docker image builds
+* Docker Hub image publishing
+
+### Monitoring & Alerting
+
+* Health check monitoring
+* Application metrics endpoint
+* Incident detection
+* Discord alert notifications
+* Deployment and monitoring logs
+
+### Infrastructure as Code
+
+* Terraform-managed infrastructure
+* Declarative infrastructure provisioning
+* Version-controlled infrastructure
+
+### Kubernetes Operations
+
+* Kubernetes Deployment management
+* Kubernetes Service exposure
+* Self-healing pod recovery
+* Rolling updates
+* Automated rollback support
+* Replica management
+* High-availability deployment strategy
+
+## Technology Stack
+
+* Python / Flask
+* Docker
+* GitHub Actions
+* Pytest
+* Docker Hub
+* Terraform
+* Kubernetes (Kind)
+* Discord Webhooks
 
 ## Project Architecture
 
 Developer
-→ deploy.sh
-→ Docker Container
-→ Health Check
+↓
+GitHub Repository
+↓
+GitHub Actions CI/CD
+↓
+Automated Testing (Pytest)
+↓
+Docker Image Build
+↓
+Docker Hub Registry
+↓
+Kubernetes Deployment
+↓
+Self-Healing Pods
+↓
+Monitoring & Health Checks
+↓
+Discord Alert Notifications
 
-Successful Deployment
-→ Deployment History
+## Demonstrated DevOps Concepts
 
-Failed Deployment
-→ Incident Report
-→ Rollback
-
-Continuous Monitoring
-→ Failure Detection
-→ Automatic Restart
-→ Alert Notification
-
-## Technologies Used
-
-- Python
-- Flask
-- Bash
-- Docker
-- Linux
-- JSON
-
-## Running the Project
-
-1. Build and deploy:
-
-./scripts/deploy.sh
-
-2. Start monitoring:
-
-python3 monitor/monitor.py
-
-3. Test self-healing:
-
-docker stop myapp
-
-The monitoring service should detect the failure and automatically restart the container.
-
-## Future Improvements
-
-- GitHub Actions CI/CD
-- Docker Compose
-- Slack/Discord Notifications
-- Kubernetes Deployment
-- Prometheus Monitoring
-- Grafana Dashboards
+* Continuous Integration (CI)
+* Continuous Delivery (CD)
+* Infrastructure as Code (IaC)
+* Containerization
+* Automated Testing
+* Monitoring & Alerting
+* Kubernetes Orchestration
+* Self-Healing Infrastructure
+* Rolling Updates
+* Rollbacks
+* Deployment Automation
