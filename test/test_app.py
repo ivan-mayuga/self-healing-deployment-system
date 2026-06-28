@@ -7,7 +7,7 @@ def test_home_endpoint():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.data.decode() == "Application Running"
+    assert response.data.decode() == "Application Running - Version 2"
 
 
 def test_health_endpoint():
